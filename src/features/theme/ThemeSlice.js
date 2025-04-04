@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Alert } from 'react-native'
 
 import { sqliteDB } from "../../persistence";
 const { getTheme, saveTheme } = sqliteDB(); 
@@ -30,7 +29,7 @@ export const loadThemeFromDB = () => async (dispatch) => {
       const darkMode = await getTheme();
       dispatch(setTheme(darkMode));
     } catch (error) {
-      Alert.alert('Error', 'Error al cargar el tema desde DB');
+
     }
   };
 
