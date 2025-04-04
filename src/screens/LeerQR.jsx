@@ -127,8 +127,7 @@ const LeerQR = () => {
             </>
           ) : apiResponse.status === 'error' ? (
             <>
-              <Text style={[styles.text, textStyle]}>Error Message: {apiResponse.errorMessage}</Text>
-              <Text style={[styles.text, textStyle]}>Error Code: {apiResponse.errorCode}</Text>
+              <Text style={[styles.text, textStyle]}>Error Message: {apiResponse.message}</Text>
             </>
           ) : apiResponse.status === 'successNo' ? (
             <>
